@@ -1,12 +1,15 @@
 <div class="container">
+  <h1 class="text-center">Flats</h1>
+  <h3 class="text-center"><%= link_to "Add flat", new_flat_path %></h3>
   <div class="row">
-    <h1>dsdsdsd</h1>
     <% @flats.each do |flat| %>
       <div class="col-sm-4">
-          <div class="card">
-            <h3><%= flat.name %></h3>
-            <p><%= flat.address %></p>
-            <p><%= flat.description %></p>
+          <div class="card text-white bg-primary mt-3">
+            <div class="card-body">
+              <h3><%= flat.name %></h3>
+              <p><%= flat.address %></p>
+              <p><%= flat.description %></p>
+            </div>
           </div>
       </div>
     <% end %>
